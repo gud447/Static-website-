@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Billing Manager</title>
+        <style>
+            header{background: green;color: beige; text-align: center;font-size: 300%;;padding: 3rem;}
+            nav{background: black; }
+            nav button{background:black; cursor: pointer;padding: 1rem;width: 200px; border: none;color: white;}
+            nav button:hover{background: #4e4e4e;}
+
+        </style>
+    </head>
+    <body>
+        <div id="appContent">
+        <header>
+            <img src="logo.jpeg" ></img>
+            Welcome to Billing Manager
+           </header>
+        <nav>
+           
+            <button onclick="showSection('Home')">Home</button>
+            <button onclick="showSection('Products')">Products</button>
+            <button onclick="showSection('contactus')">contactus</button>
+            <button onclick="showSection('Pricing')">Pricing</button>
+
+           
+            <button onclick="showSection('Login')">Login</button>
+            <button onclick="showSection('register')">Register</button>
+        </nav>
+        <section id="Home" class="active">
+      <h2>Marketing</h2>
+      <p></p>
+    </section>
+     <section id="Login" >
+      <h2>Login</h2>
+     <label for="loginUser">Username</label>
+        <input type="text" id="loginUser">
+    </section>
+    </div>
+    <script>
+        function showSection(id) {
+      document.querySelectorAll('#appContent section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+    </script>
+    </body>
+</html>
